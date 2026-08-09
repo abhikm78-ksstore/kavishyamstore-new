@@ -1,23 +1,438 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>KaviShyam Store | Home</title><link rel="stylesheet" href="css/style.css"></head>
-<body>
-<header>
-<a class="brand" href="index.html">
-<img src="images/logo.png" alt="KaviShyam Store">
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<nav>
-<a class="active" href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-<section class="hero"><h1>Style. Beauty. Everyday Essentials.</h1><p>Discover hand-picked fashion, beauty, jewellery and kitchen products at KaviShyam Store.</p><a href="shop.html" class="btn">Shop Now</a></section>
-<section class="section"><h2>Shop by Category</h2><p class="section-intro">Explore our latest collection.</p><div class="categories">
-<div class="category-card"><img src="images/images (1).jpg" alt="Fashion"><h3>Fashion</h3><a class="btn outline" href="shop.html?cat=Fashion">Explore</a></div>
-<div class="category-card"><img src="images/images (70).jpg" alt="Beauty"><h3>Beauty</h3><a class="btn outline" href="shop.html?cat=Beauty">Explore</a></div>
-<div class="category-card"><img src="images/images (34).jpg" alt="Jewellery"><h3>Jewellery</h3><a class="btn outline" href="shop.html?cat=Jewellery">Explore</a></div>
-<div class="category-card"><img src="images/images (12).jpg" alt="Kitchen"><h3>Kitchen</h3><a class="btn outline" href="shop.html?cat=Kitchen">Explore</a></div>
-</div></section>
-<section class="section"><h2>Why KaviShyam Store?</h2><div class="features"><div class="feature"><div class="icon">✨</div><h3>Curated Products</h3><p>Products are listed according to the actual images in your collection.</p></div><div class="feature"><div class="icon">💰</div><h3>Value Pricing</h3><p>Clear prices with simple ordering through WhatsApp.</p></div><div class="feature"><div class="icon">📱</div><h3>Easy Support</h3><p>Call or WhatsApp us directly for product enquiries.</p></div></div></section>
-<footer><div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><p>© 2026 KaviShyam Store | All Rights Reserved</p></footer><a class="floating-whatsapp" href="https://wa.me/917289094501" target="_blank" rel="noopener">💬 WhatsApp</a></body></html>
+    <title>KaviShyam Store | Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+        }
+
+        /* HEADER */
+        header {
+            background: #0d1b2a;
+            min-height: 80px;
+            padding: 8px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand img {
+            height: 65px;
+            width: 65px;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: #d4af37;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #0d1b2a, #123b4a);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            margin-top: 28px;
+            padding: 14px 32px;
+            background: #d4af37;
+            color: #0d1b2a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .shop-btn:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* SECTION */
+        .section {
+            padding: 55px 5%;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #0d1b2a;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            color: #666666;
+            margin-bottom: 35px;
+        }
+
+        /* CATEGORY CARDS */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .category-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            transition: 0.3s;
+            padding-bottom: 22px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .category-card h3 {
+            color: #0d1b2a;
+            margin: 18px 0 12px;
+            font-size: 21px;
+        }
+
+        .outline-btn {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 2px solid #d4af37;
+            border-radius: 25px;
+            color: #0d1b2a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .outline-btn:hover {
+            background: #d4af37;
+        }
+
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: 35px auto 0;
+        }
+
+        .feature {
+            background: #f8f8f8;
+            padding: 30px 20px;
+            border-radius: 12px;
+            border-top: 4px solid #d4af37;
+        }
+
+        .feature .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            color: #0d1b2a;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 20px;
+        }
+
+        .footer-links {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        .footer-links a:hover {
+            color: #d4af37;
+        }
+
+        footer p {
+            color: #cccccc;
+            font-size: 14px;
+        }
+
+        /* WHATSAPP */
+        .floating-whatsapp {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: #25d366;
+            color: white;
+            padding: 13px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+            z-index: 2000;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 50px 15px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            .category-card img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <a class="brand" href="index.html">
+            <img src="images/logo.png" alt="KaviShyam Store">
+        </a>
+
+        <nav>
+            <a class="active" href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Style. Beauty. Everyday Essentials.</h1>
+
+        <p>
+            Discover hand-picked fashion, beauty, jewellery and kitchen
+            products at KaviShyam Store.
+        </p>
+
+        <a class="shop-btn" href="shop.html">Shop Now</a>
+    </section>
+
+
+    <!-- CATEGORIES -->
+    <section class="section">
+
+        <h2>Shop by Category</h2>
+
+        <p class="section-intro">
+            Explore our latest collection.
+        </p>
+
+        <div class="categories">
+
+            <div class="category-card">
+                <img src="images/images (1).jpg" alt="Fashion">
+                <h3>Fashion</h3>
+                <a class="outline-btn" href="shop.html?cat=Fashion">
+                    Explore
+                </a>
+            </div>
+
+            <div class="category-card">
+                <img src="images/images (70).jpg" alt="Beauty">
+                <h3>Beauty</h3>
+                <a class="outline-btn" href="shop.html?cat=Beauty">
+                    Explore
+                </a>
+            </div>
+
+            <div class="category-card">
+                <img src="images/images (34).jpg" alt="Jewellery">
+                <h3>Jewellery</h3>
+                <a class="outline-btn" href="shop.html?cat=Jewellery">
+                    Explore
+                </a>
+            </div>
+
+            <div class="category-card">
+                <img src="images/images (12).jpg" alt="Kitchen">
+                <h3>Kitchen</h3>
+                <a class="outline-btn" href="shop.html?cat=Kitchen">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- WHY KAVISHYAM -->
+    <section class="section">
+
+        <h2>Why KaviShyam Store?</h2>
+
+        <div class="features">
+
+            <div class="feature">
+                <div class="icon">✨</div>
+                <h3>Curated Products</h3>
+                <p>
+                    Products are carefully selected to offer useful,
+                    stylish and value-for-money choices.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">💰</div>
+                <h3>Value Pricing</h3>
+                <p>
+                    Clear and competitive prices with simple ordering
+                    through WhatsApp.
+                </p>
+            </div>
+
+            <div class="feature">
+                <div class="icon">🛍️</div>
+                <h3>Easy Shopping</h3>
+                <p>
+                    Browse products online and contact us directly
+                    for product details and orders.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <p>
+            © 2026 KaviShyam Store | All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- WHATSAPP -->
+    <a
+        class="floating-whatsapp"
+        href="https://wa.me/917289094501"
+        target="_blank"
+        rel="noopener">
+        💬 WhatsApp
+    </a>
+
+</body>
+</html>
