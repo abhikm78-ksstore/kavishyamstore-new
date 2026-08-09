@@ -22,10 +22,22 @@ header{
     z-index:1000;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:#d4af37;
+.brand img{
+    height:60px;
+    width:auto;
+    display:block;
+    object-fit:contain;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+header nav{
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
 
 nav a{
