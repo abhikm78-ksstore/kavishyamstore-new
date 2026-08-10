@@ -1,9 +1,580 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Contact | KaviShyam Store</title><link rel="stylesheet" href="css/style.css"></head>
-<body><header><a class="brand" href="index.html"><img src="logo.svg" alt="KaviShyam Store"></a><nav><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a></nav></header>
-<section class="page-hero"><h1>Contact Us</h1><p>We are happy to help with product and order enquiries.</p></section>
-<section class="contact-grid">
-<div class="contact-box"><h3>📞 Call Us</h3><p>Speak directly with KaviShyam Store.</p><a href="tel:+917289094501">7289094501</a></div>
-<div class="contact-box"><h3>💬 WhatsApp</h3><p>Send us a message for product details and orders.</p><a href="https://wa.me/917289094501" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-<div class="contact-box"><h3>🛍️ Order</h3><p>Choose a product from our Shop page and use the WhatsApp order button.</p><a href="shop.html">View Products</a></div>
-</section>
-<footer><div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="about.html">About</a></div><p>© 2026 KaviShyam Store | All Rights Reserved</p></footer><a class="floating-whatsapp" href="https://wa.me/917289094501" target="_blank" rel="noopener">💬 WhatsApp</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | KaviShyam Store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
+        .contact-header {
+            background: #0D1B2A;
+            min-height: 76px;
+            padding: 8px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .contact-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .contact-brand img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .contact-nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .contact-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .contact-nav a:hover,
+        .contact-nav a.active {
+            color: #D4AF37;
+        }
+
+
+        /* ================= HERO ================= */
+
+        .contact-hero {
+            background: linear-gradient(135deg, #0D1B2A, #17324d);
+            padding: 65px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .contact-label {
+            color: #D4AF37;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .contact-hero h1 {
+            margin: 0 0 15px;
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .contact-hero h1 span {
+            color: #D4AF37;
+        }
+
+        .contact-hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #e8edf2;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        .contact-container {
+            max-width: 1050px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+
+        /* ================= INTRO ================= */
+
+        .contact-intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-intro h2 {
+            color: #0D1B2A;
+            font-size: 29px;
+            margin: 0 0 10px;
+        }
+
+        .contact-intro p {
+            color: #666;
+            line-height: 1.7;
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+
+        /* ================= CONTACT CARDS ================= */
+
+        .contact-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-bottom: 35px;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 35px 25px;
+            text-align: center;
+            border: 1px solid #eeeeee;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+            transition: 0.25s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.11);
+        }
+
+        .contact-icon {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 17px;
+            border-radius: 50%;
+            background: #0D1B2A;
+            color: #D4AF37;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 29px;
+        }
+
+        .contact-card h3 {
+            color: #0D1B2A;
+            font-size: 22px;
+            margin: 0 0 9px;
+        }
+
+        .contact-card p {
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+
+        .contact-number {
+            display: block;
+            color: #0D1B2A;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 18px;
+        }
+
+        .contact-number:hover {
+            color: #D4AF37;
+        }
+
+
+        /* ================= BUTTONS ================= */
+
+        .contact-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            transition: 0.25s ease;
+        }
+
+        .call-btn {
+            background: #0D1B2A;
+            color: #ffffff;
+        }
+
+        .call-btn:hover {
+            background: #17324d;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: #ffffff;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+        }
+
+
+        /* ================= HELP SECTION ================= */
+
+        .contact-help {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 38px;
+            text-align: center;
+            border: 1px solid #eeeeee;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+            margin-bottom: 35px;
+        }
+
+        .contact-help h2 {
+            color: #0D1B2A;
+            margin: 0 0 12px;
+            font-size: 28px;
+        }
+
+        .gold-line {
+            width: 55px;
+            height: 4px;
+            background: #D4AF37;
+            border-radius: 5px;
+            margin: 0 auto 18px;
+        }
+
+        .contact-help p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            line-height: 1.8;
+        }
+
+
+        /* ================= CTA ================= */
+
+        .contact-cta {
+            background: linear-gradient(135deg, #0D1B2A, #17324d);
+            border-radius: 20px;
+            padding: 42px 25px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .contact-cta h2 {
+            color: #D4AF37;
+            margin: 0 0 12px;
+            font-size: 29px;
+        }
+
+        .contact-cta p {
+            color: #e8edf2;
+            margin: 0 auto 22px;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        .cta-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: #ffffff;
+            padding: 13px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .cta-whatsapp:hover {
+            background: #1da851;
+        }
+
+
+        /* ================= FOOTER ================= */
+
+        .contact-footer {
+            background: #0D1B2A;
+            color: #ffffff;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            margin-bottom: 13px;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #D4AF37;
+        }
+
+        .contact-footer p {
+            margin: 0;
+            color: #d9d9d9;
+            font-size: 13px;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .contact-header {
+                padding: 8px 15px;
+                min-height: auto;
+                flex-direction: column;
+            }
+
+            .contact-brand img {
+                width: 48px;
+                height: 48px;
+            }
+
+            .contact-nav {
+                gap: 16px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-nav a {
+                font-size: 14px;
+            }
+
+            .contact-hero {
+                padding: 50px 18px;
+            }
+
+            .contact-hero h1 {
+                font-size: 31px;
+            }
+
+            .contact-hero p {
+                font-size: 15px;
+            }
+
+            .contact-container {
+                margin-top: 30px;
+            }
+
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-help {
+                padding: 28px 20px;
+            }
+
+            .contact-cta {
+                padding: 35px 20px;
+            }
+
+            .footer-links a {
+                display: inline-block;
+                margin: 5px 7px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="contact-header">
+
+        <a href="index.html" class="contact-brand">
+            <img src="images/logo.png" alt="KaviShyam Store">
+        </a>
+
+        <nav class="contact-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="contact-hero">
+
+        <div class="contact-label">We Are Here to Help</div>
+
+        <h1>
+            Contact <span>KaviShyam Store</span>
+        </h1>
+
+        <p>
+            Have a question about a product or want to place an order?
+            Get in touch with us directly.
+        </p>
+
+    </section>
+
+
+    <!-- ================= CONTENT ================= -->
+
+    <main class="contact-container">
+
+
+        <!-- INTRO -->
+
+        <section class="contact-intro">
+
+            <h2>Get in Touch With Us</h2>
+
+            <p>
+                We are happy to help you with product information,
+                availability and orders. You can contact us directly
+                by phone or WhatsApp.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT OPTIONS -->
+
+        <section class="contact-cards">
+
+
+            <!-- CALL -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">📞</div>
+
+                <h3>Call Us</h3>
+
+                <p>
+                    For quick assistance, speak with us directly.
+                </p>
+
+                <a
+                    href="tel:7289094501"
+                    class="contact-number">
+                    7289094501
+                </a>
+
+                <a
+                    href="tel:7289094501"
+                    class="contact-btn call-btn">
+                    Call Now
+                </a>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="contact-card">
+
+                <div class="contact-icon">💬</div>
+
+                <h3>WhatsApp Us</h3>
+
+                <p>
+                    Send us a message for product details
+                    and ordering assistance.
+                </p>
+
+                <a
+                    href="https://wa.me/917289094501"
+                    target="_blank"
+                    class="contact-number">
+                    7289094501
+                </a>
+
+                <a
+                    href="https://wa.me/917289094501"
+                    target="_blank"
+                    class="contact-btn whatsapp-btn">
+                    WhatsApp Us
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- HELP -->
+
+        <section class="contact-help">
+
+            <h2>How Can We Help?</h2>
+
+            <div class="gold-line"></div>
+
+            <p>
+                Whether you want to know more about a product,
+                check availability or place an order, simply call us
+                or send us a WhatsApp message. Our team will be happy
+                to assist you.
+            </p>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="contact-cta">
+
+            <h2>Ready to Shop?</h2>
+
+            <p>
+                Explore our collection and contact us whenever
+                you need assistance.
+            </p>
+
+            <a
+                href="https://wa.me/917289094501"
+                target="_blank"
+                class="cta-whatsapp">
+                💬 Chat on WhatsApp
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="contact-footer">
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <p>
+            © 2026 KaviShyam Store | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+</html>
