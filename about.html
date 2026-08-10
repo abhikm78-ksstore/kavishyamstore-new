@@ -1,5 +1,455 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>About | KaviShyam Store</title><link rel="stylesheet" href="css/style.css"></head>
-<img src="images/logo.png" alt="KaviShyam Store">
-<section class="page-hero"><h1>About KaviShyam Store</h1><p>Simple shopping for style, beauty and everyday essentials.</p></section>
-<section class="content"><h2>Our Story</h2><p>KaviShyam Store is an online collection focused on fashionable products, beauty essentials, jewellery and useful kitchen items.</p><h2>What You Will Find</h2><p>Our catalogue has been rebuilt from the product images supplied for this project, with product names matched to what is visibly shown in each image.</p><h2>Our Promise</h2><p>We aim to keep the shopping experience simple, transparent and mobile-friendly. For availability, delivery and order details, contact us directly on WhatsApp or by phone.</p></section>
-<footer><div class="footer-links"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a></div><p>© 2026 KaviShyam Store | All Rights Reserved</p></footer><a class="floating-whatsapp" href="https://wa.me/917289094501" target="_blank" rel="noopener">💬 WhatsApp</a></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | KaviShyam Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* =========================
+           ABOUT PAGE ONLY
+        ========================= */
+
+        .about-page {
+            background: #f8f9fb;
+            color: #222;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .about-header {
+            background: #0d1b2a;
+            padding: 12px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .about-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .about-logo img {
+            height: 62px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .about-nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .about-nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .about-nav a:hover,
+        .about-nav .active {
+            color: #d4af37;
+        }
+
+        /* Hero */
+        .about-hero {
+            text-align: center;
+            padding: 70px 20px 55px;
+            background:
+                linear-gradient(rgba(13,27,42,0.94), rgba(13,27,42,0.94)),
+                url("logo.svg") center/contain no-repeat;
+            color: white;
+        }
+
+        .about-hero h1 {
+            font-size: 44px;
+            margin-bottom: 12px;
+            color: #d4af37;
+        }
+
+        .about-hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #f2f2f2;
+        }
+
+        /* Main */
+        .about-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .about-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            border-top: 4px solid #d4af37;
+        }
+
+        .about-card h2 {
+            color: #0d1b2a;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .about-card h2 span {
+            color: #d4af37;
+        }
+
+        .about-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        /* Feature Cards */
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .feature-box {
+            background: #ffffff;
+            padding: 30px 22px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-6px);
+        }
+
+        .feature-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .feature-box h3 {
+            color: #0d1b2a;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature-box p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Promise */
+        .about-promise {
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            border-radius: 20px;
+            padding: 45px 30px;
+            margin-top: 35px;
+        }
+
+        .about-promise h2 {
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .about-promise p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.8;
+            color: #eeeeee;
+        }
+
+        /* Footer */
+        .about-footer {
+            background: #0d1b2a;
+            color: white;
+            text-align: center;
+            padding: 28px 20px;
+            margin-top: 50px;
+        }
+
+        .about-footer-links {
+            margin-bottom: 15px;
+        }
+
+        .about-footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 500;
+        }
+
+        .about-footer-links a:hover {
+            color: #d4af37;
+        }
+
+        .about-footer p {
+            margin: 0;
+            color: #dddddd;
+            font-size: 14px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .about-header {
+                padding: 10px 15px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .about-logo img {
+                height: 55px;
+            }
+
+            .about-nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .about-nav a {
+                font-size: 14px;
+            }
+
+            .about-hero {
+                padding: 50px 20px;
+            }
+
+            .about-hero h1 {
+                font-size: 32px;
+            }
+
+            .about-hero p {
+                font-size: 15px;
+            }
+
+            .about-card {
+                padding: 25px 20px;
+            }
+
+            .about-card h2 {
+                font-size: 24px;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .about-promise {
+                padding: 35px 20px;
+            }
+
+            .about-footer-links a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body class="about-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="about-header">
+
+        <a href="index.html" class="about-logo">
+            <img src="logo.svg" alt="KaviShyam Store Logo">
+        </a>
+
+        <nav class="about-nav">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html" class="active">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <h1>About KaviShyam Store</h1>
+
+        <p>
+            Your trusted online destination for stylish fashion,
+            beauty essentials, jewellery and useful everyday products.
+        </p>
+
+    </section>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="about-container">
+
+        <!-- Our Story -->
+
+        <section class="about-card">
+
+            <h2>Our <span>Story</span></h2>
+
+            <p>
+                Welcome to <strong>KaviShyam Store</strong> — a simple,
+                customer-focused online shopping store created to make
+                discovering useful and stylish products easier.
+            </p>
+
+            <p>
+                We bring together carefully selected products across
+                fashion, beauty, jewellery and everyday essentials,
+                giving customers a convenient place to explore products
+                and connect with us directly for orders and product
+                information.
+            </p>
+
+        </section>
+
+
+        <!-- What We Offer -->
+
+        <section class="about-card">
+
+            <h2>What <span>We Offer</span></h2>
+
+            <p>
+                Our collection is focused on products that combine
+                style, usefulness and everyday value.
+            </p>
+
+            <div class="about-features">
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">👗</div>
+
+                    <h3>Fashion</h3>
+
+                    <p>
+                        Stylish fashion products selected for everyday
+                        looks and special occasions.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">💄</div>
+
+                    <h3>Beauty</h3>
+
+                    <p>
+                        Beauty and personal-care products selected with
+                        convenience and style in mind.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-box">
+
+                    <div class="feature-icon">💎</div>
+
+                    <h3>Jewellery</h3>
+
+                    <p>
+                        Attractive jewellery and accessories to add
+                        an elegant touch to your style.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Why KaviShyam -->
+
+        <section class="about-card">
+
+            <h2>Why <span>KaviShyam Store?</span></h2>
+
+            <p>
+                We believe online shopping should be simple,
+                transparent and convenient.
+            </p>
+
+            <p>
+                Our goal is to provide customers with an easy way to
+                discover products, view their details and contact us
+                directly for availability, delivery and ordering
+                information.
+            </p>
+
+        </section>
+
+
+        <!-- Promise -->
+
+        <section class="about-promise">
+
+            <h2>Our Promise</h2>
+
+            <p>
+                We aim to provide a smooth and friendly shopping
+                experience while continuously improving our collection
+                and service. Your satisfaction and trust are important
+                to us.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="about-footer">
+
+        <div class="about-footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <p>
+            © 2026 KaviShyam Store | All Rights Reserved
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
