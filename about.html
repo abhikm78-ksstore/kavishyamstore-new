@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>About | KaviShyam Store</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
     <style>
-        /* =========================
-           ABOUT PAGE ONLY
-        ========================= */
-
-        .about-page {
-            background: #f8f9fb;
-            color: #222;
-            min-height: 100vh;
+        * {
+            box-sizing: border-box;
         }
 
-        /* Header */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #222;
+        }
+
+        /* ================= HEADER ================= */
+
         .about-header {
-            background: #0d1b2a;
-            padding: 12px 7%;
+            background: #0D1B2A;
+            min-height: 76px;
+            padding: 8px 6%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            justify-content: space-between;
+            gap: 20px;
             box-shadow: 0 3px 15px rgba(0,0,0,0.15);
         }
 
-        .about-logo {
+        .about-brand {
             display: flex;
             align-items: center;
             text-decoration: none;
         }
 
-        .about-logo img {
-            height: 45px;
-            width: auto;
-            display: block;
+        .about-brand img {
+            width: 52px;
+            height: 52px;
             object-fit: contain;
+            display: block;
         }
 
         .about-nav {
@@ -55,179 +53,308 @@
         .about-nav a {
             color: #ffffff;
             text-decoration: none;
+            font-size: 15px;
             font-weight: 600;
-            font-size: 16px;
-            transition: 0.3s;
+            transition: 0.25s ease;
         }
 
         .about-nav a:hover,
-        .about-nav .active {
-            color: #d4af37;
+        .about-nav a.active {
+            color: #D4AF37;
         }
 
-        /* Hero */
+
+        /* ================= HERO ================= */
+
         .about-hero {
+            background: linear-gradient(135deg, #0D1B2A, #17324d);
+            padding: 65px 20px;
             text-align: center;
-            padding: 70px 20px 55px;
-            background:
-                linear-gradient(rgba(13,27,42,0.94), rgba(13,27,42,0.94)),
-                url("logo.svg") center/contain no-repeat;
-            color: white;
+            color: #ffffff;
+        }
+
+        .about-label {
+            color: #D4AF37;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
         }
 
         .about-hero h1 {
-            font-size: 44px;
-            margin-bottom: 12px;
-            color: #d4af37;
+            margin: 0 0 15px;
+            font-size: 42px;
+            line-height: 1.2;
+        }
+
+        .about-hero h1 span {
+            color: #D4AF37;
         }
 
         .about-hero p {
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
-            font-size: 18px;
-            line-height: 1.7;
-            color: #f2f2f2;
+            color: #e8edf2;
+            font-size: 17px;
+            line-height: 1.8;
         }
 
-        /* Main */
+
+        /* ================= MAIN ================= */
+
         .about-container {
-            max-width: 1100px;
-            margin: 50px auto;
+            max-width: 1080px;
+            margin: 45px auto;
             padding: 0 20px;
         }
 
-        .about-card {
+
+        /* ================= STORY ================= */
+
+        .about-story {
             background: #ffffff;
             border-radius: 18px;
-            padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            border-top: 4px solid #d4af37;
+            padding: 38px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+            border: 1px solid #eeeeee;
+            margin-bottom: 35px;
         }
 
-        .about-card h2 {
-            color: #0d1b2a;
-            font-size: 28px;
-            margin-bottom: 15px;
+        .section-heading {
+            margin: 0 0 8px;
+            color: #0D1B2A;
+            font-size: 29px;
         }
 
-        .about-card h2 span {
-            color: #d4af37;
+        .gold-line {
+            width: 55px;
+            height: 4px;
+            background: #D4AF37;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
 
-        .about-card p {
-            font-size: 16px;
-            line-height: 1.8;
+        .about-story p {
             color: #555;
-            margin-bottom: 12px;
+            line-height: 1.85;
+            font-size: 16px;
+            margin: 0 0 13px;
         }
 
-        /* Feature Cards */
-        .about-features {
+
+        /* ================= OFFER ================= */
+
+        .offer-title {
+            text-align: center;
+            color: #0D1B2A;
+            font-size: 29px;
+            margin: 45px 0 8px;
+        }
+
+        .offer-subtitle {
+            text-align: center;
+            color: #666;
+            margin: 0 auto 28px;
+            line-height: 1.6;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .offer-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 18px;
+            text-align: center;
+            border: 1px solid #eeeeee;
+            box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+            transition: 0.25s ease;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.10);
+        }
+
+        .offer-icon {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #0D1B2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+        }
+
+        .offer-card h3 {
+            color: #0D1B2A;
+            margin: 0 0 9px;
+            font-size: 18px;
+        }
+
+        .offer-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+
+        /* ================= WHY US ================= */
+
+        .why-section {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 38px;
+            border: 1px solid #eeeeee;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+            margin-bottom: 35px;
+        }
+
+        .why-section p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 16px;
+            margin-bottom: 22px;
+        }
+
+        .why-points {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-            margin-top: 30px;
+            gap: 16px;
         }
 
-        .feature-box {
-            background: #ffffff;
-            padding: 30px 22px;
-            text-align: center;
-            border-radius: 16px;
-            box-shadow: 0 7px 25px rgba(0,0,0,0.07);
-            transition: 0.3s;
+        .why-point {
+            background: #f7f8fa;
+            padding: 20px;
+            border-radius: 13px;
+            border-left: 4px solid #D4AF37;
         }
 
-        .feature-box:hover {
-            transform: translateY(-6px);
+        .why-point strong {
+            display: block;
+            color: #0D1B2A;
+            margin-bottom: 7px;
         }
 
-        .feature-icon {
-            font-size: 38px;
-            margin-bottom: 12px;
-        }
-
-        .feature-box h3 {
-            color: #0d1b2a;
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .feature-box p {
+        .why-point span {
             color: #666;
-            line-height: 1.6;
             font-size: 14px;
+            line-height: 1.5;
         }
 
-        /* Promise */
-        .about-promise {
-            background: #0d1b2a;
-            color: white;
-            text-align: center;
+
+        /* ================= PROMISE ================= */
+
+        .promise-section {
+            background: linear-gradient(135deg, #0D1B2A, #17324d);
+            color: #ffffff;
             border-radius: 20px;
             padding: 45px 30px;
-            margin-top: 35px;
+            text-align: center;
+            margin-bottom: 35px;
         }
 
-        .about-promise h2 {
-            color: #d4af37;
-            margin-bottom: 15px;
+        .promise-section h2 {
+            color: #D4AF37;
+            margin: 0 0 14px;
             font-size: 30px;
         }
 
-        .about-promise p {
+        .promise-section p {
             max-width: 750px;
             margin: auto;
+            color: #e8edf2;
             line-height: 1.8;
-            color: #eeeeee;
+            font-size: 16px;
         }
 
-        /* Footer */
+
+        /* ================= THANK YOU ================= */
+
+        .thank-you {
+            text-align: center;
+            padding: 10px 20px 25px;
+        }
+
+        .thank-you h2 {
+            color: #0D1B2A;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .thank-you p {
+            color: #666;
+            margin: 0;
+        }
+
+
+        /* ================= FOOTER ================= */
+
         .about-footer {
-            background: #0d1b2a;
-            color: white;
+            background: #0D1B2A;
+            color: #ffffff;
             text-align: center;
             padding: 28px 20px;
-            margin-top: 50px;
         }
 
-        .about-footer-links {
-            margin-bottom: 15px;
+        .footer-links {
+            margin-bottom: 13px;
         }
 
-        .about-footer-links a {
+        .footer-links a {
             color: #ffffff;
             text-decoration: none;
-            margin: 0 12px;
-            font-weight: 500;
+            margin: 0 10px;
+            font-size: 14px;
         }
 
-        .about-footer-links a:hover {
-            color: #d4af37;
+        .footer-links a:hover {
+            color: #D4AF37;
         }
 
         .about-footer p {
             margin: 0;
-            color: #dddddd;
-            font-size: 14px;
+            color: #d9d9d9;
+            font-size: 13px;
         }
 
-        /* Mobile */
-        @media (max-width: 768px) {
 
-            .about-header {
-                padding: 10px 15px;
-                flex-direction: column;
-                gap: 12px;
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 850px) {
+
+            .offer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .about-logo img {
-                height: 55px;
+            .why-points {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .about-header {
+                padding: 8px 15px;
+                min-height: auto;
+                flex-direction: column;
+            }
+
+            .about-brand img {
+                width: 48px;
+                height: 48px;
             }
 
             .about-nav {
-                gap: 15px;
+                gap: 16px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
@@ -237,49 +364,56 @@
             }
 
             .about-hero {
-                padding: 50px 20px;
+                padding: 50px 18px;
             }
 
             .about-hero h1 {
-                font-size: 32px;
+                font-size: 31px;
             }
 
             .about-hero p {
                 font-size: 15px;
             }
 
-            .about-card {
+            .about-container {
+                margin-top: 30px;
+            }
+
+            .about-story,
+            .why-section {
                 padding: 25px 20px;
             }
 
-            .about-card h2 {
-                font-size: 24px;
-            }
-
-            .about-features {
+            .offer-grid {
                 grid-template-columns: 1fr;
             }
 
-            .about-promise {
+            .offer-title,
+            .section-heading {
+                font-size: 25px;
+            }
+
+            .promise-section {
                 padding: 35px 20px;
             }
 
-            .about-footer-links a {
+            .footer-links a {
                 display: inline-block;
-                margin: 5px 8px;
+                margin: 5px 7px;
             }
         }
     </style>
 </head>
 
-<body class="about-page">
+
+<body>
 
     <!-- ================= HEADER ================= -->
 
     <header class="about-header">
 
-        <a href="index.html" class="about-logo">
-            <img src="logo.svg" alt="KaviShyam Store Logo">
+        <a href="index.html" class="about-brand">
+            <img src="images/logo.png" alt="KaviShyam Store">
         </a>
 
         <nav class="about-nav">
@@ -296,95 +430,161 @@
 
     <section class="about-hero">
 
-        <h1>About KaviShyam Store</h1>
+        <div class="about-label">Welcome to KaviShyam</div>
+
+        <h1>
+            About <span>KaviShyam Store</span>
+        </h1>
 
         <p>
-            Your trusted online destination for stylish fashion,
-            beauty essentials, jewellery and useful everyday products.
+            Style, beauty and everyday essentials — carefully selected
+            to make your shopping experience simple, beautiful and convenient.
         </p>
 
     </section>
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ================= CONTENT ================= -->
 
     <main class="about-container">
 
-        <!-- Our Story -->
 
-        <section class="about-card">
+        <!-- OUR STORY -->
 
-            <h2>Our <span>Story</span></h2>
+        <section class="about-story">
+
+            <h2 class="section-heading">Our Story</h2>
+
+            <div class="gold-line"></div>
 
             <p>
-                Welcome to <strong>KaviShyam Store</strong> — a simple,
-                customer-focused online shopping store created to make
-                discovering useful and stylish products easier.
+                Welcome to <strong>KaviShyam Store</strong> — an online
+                shopping destination created for customers who appreciate
+                stylish products, useful everyday essentials and a simple
+                shopping experience.
             </p>
 
             <p>
-                We bring together carefully selected products across
-                fashion, beauty, jewellery and everyday essentials,
-                giving customers a convenient place to explore products
-                and connect with us directly for orders and product
-                information.
+                Our collection brings together fashion, beauty, jewellery
+                and everyday essentials in one convenient place.
+            </p>
+
+            <p>
+                We believe shopping should be easy, transparent and enjoyable
+                — from discovering a product to placing an order.
             </p>
 
         </section>
 
 
-        <!-- What We Offer -->
+        <!-- WHAT YOU WILL FIND -->
 
-        <section class="about-card">
+        <h2 class="offer-title">What You Will Find</h2>
 
-            <h2>What <span>We Offer</span></h2>
+        <p class="offer-subtitle">
+            Explore our carefully selected collection.
+        </p>
+
+
+        <section class="offer-grid">
+
+            <div class="offer-card">
+
+                <div class="offer-icon">👗</div>
+
+                <h3>Fashion</h3>
+
+                <p>
+                    Stylish fashion products selected for everyday
+                    and special occasions.
+                </p>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">💄</div>
+
+                <h3>Beauty</h3>
+
+                <p>
+                    Beauty and personal-care essentials for
+                    your everyday needs.
+                </p>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">💎</div>
+
+                <h3>Jewellery</h3>
+
+                <p>
+                    Attractive jewellery pieces to complement
+                    your personal style.
+                </p>
+
+            </div>
+
+
+            <div class="offer-card">
+
+                <div class="offer-icon">🍳</div>
+
+                <h3>Kitchen</h3>
+
+                <p>
+                    Useful kitchen essentials selected for
+                    convenient everyday living.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY KAVISHYAM -->
+
+        <section class="why-section">
+
+            <h2 class="section-heading">Why KaviShyam Store?</h2>
+
+            <div class="gold-line"></div>
 
             <p>
-                Our collection is focused on products that combine
-                style, usefulness and everyday value.
+                We aim to keep your shopping experience simple,
+                transparent and customer-friendly. Our goal is to provide
+                useful products, clear information and an easy way to
+                connect with us.
             </p>
 
-            <div class="about-features">
 
-                <div class="feature-box">
+            <div class="why-points">
 
-                    <div class="feature-icon">👗</div>
-
-                    <h3>Fashion</h3>
-
-                    <p>
-                        Stylish fashion products selected for everyday
-                        looks and special occasions.
-                    </p>
-
+                <div class="why-point">
+                    <strong>✨ Carefully Selected</strong>
+                    <span>
+                        Quality-focused product selection.
+                    </span>
                 </div>
 
 
-                <div class="feature-box">
-
-                    <div class="feature-icon">💄</div>
-
-                    <h3>Beauty</h3>
-
-                    <p>
-                        Beauty and personal-care products selected with
-                        convenience and style in mind.
-                    </p>
-
+                <div class="why-point">
+                    <strong>🤝 Customer First</strong>
+                    <span>
+                        Your satisfaction matters to us.
+                    </span>
                 </div>
 
 
-                <div class="feature-box">
-
-                    <div class="feature-icon">💎</div>
-
-                    <h3>Jewellery</h3>
-
-                    <p>
-                        Attractive jewellery and accessories to add
-                        an elegant touch to your style.
-                    </p>
-
+                <div class="why-point">
+                    <strong>📱 Easy Ordering</strong>
+                    <span>
+                        Simple ordering through WhatsApp.
+                    </span>
                 </div>
 
             </div>
@@ -392,41 +592,34 @@
         </section>
 
 
-        <!-- Why KaviShyam -->
+        <!-- OUR PROMISE -->
 
-        <section class="about-card">
-
-            <h2>Why <span>KaviShyam Store?</span></h2>
-
-            <p>
-                We believe online shopping should be simple,
-                transparent and convenient.
-            </p>
-
-            <p>
-                Our goal is to provide customers with an easy way to
-                discover products, view their details and contact us
-                directly for availability, delivery and ordering
-                information.
-            </p>
-
-        </section>
-
-
-        <!-- Promise -->
-
-        <section class="about-promise">
+        <section class="promise-section">
 
             <h2>Our Promise</h2>
 
             <p>
-                We aim to provide a smooth and friendly shopping
-                experience while continuously improving our collection
-                and service. Your satisfaction and trust are important
-                to us.
+                We aim to provide a smooth and friendly shopping experience
+                while continuously improving our collection and service.
+                Your satisfaction and trust are important to us.
             </p>
 
         </section>
+
+
+        <!-- THANK YOU -->
+
+        <section class="thank-you">
+
+            <h2>Thank You for Supporting KaviShyam Store ❤️</h2>
+
+            <p>
+                We look forward to serving you and making your
+                shopping experience better every day.
+            </p>
+
+        </section>
+
 
     </main>
 
@@ -435,7 +628,7 @@
 
     <footer class="about-footer">
 
-        <div class="about-footer-links">
+        <div class="footer-links">
 
             <a href="index.html">Home</a>
             <a href="shop.html">Shop</a>
@@ -451,5 +644,4 @@
     </footer>
 
 </body>
-
 </html>
