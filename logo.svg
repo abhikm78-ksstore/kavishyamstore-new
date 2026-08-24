@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 150">
-<rect width="520" height="150" rx="24" fill="#0D1B2A"/>
-<circle cx="76" cy="75" r="52" fill="#D4AF37"/>
-<path d="M76 31c-20 14-28 31-28 45 0 20 13 34 28 43 15-9 28-23 28-43 0-14-8-31-28-45z" fill="#0F766E"/>
-<path d="M76 42c-8 10-12 21-12 31 0 13 5 23 12 31 7-8 12-18 12-31 0-10-4-21-12-31z" fill="#fff"/>
-<text x="145" y="72" font-family="Georgia,serif" font-size="39" font-weight="700" fill="#D4AF37">KaviShyam</text>
-<text x="147" y="108" font-family="Arial,sans-serif" font-size="21" letter-spacing="5" fill="#FFFFFF">STORE</text>
-</svg>
