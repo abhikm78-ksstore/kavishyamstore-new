@@ -6,7 +6,7 @@ const FILES_TO_CACHE = [
   "./shop.html",
   "./about.html",
   "./contact.html",
-  "./images/logo.png"
+  "./logo.png"
 ];
 
 self.addEventListener("install", event => {
